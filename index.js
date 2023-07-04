@@ -8,6 +8,9 @@ const app = express();
 app.use(express.json())
 
 app.use(cors());
+app.get('/',(req,res)=>{
+    res.send('Hello')
+})
 app.use('api//user',userRoute)
 app.use('api/products',productRoute)
 
