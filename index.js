@@ -8,8 +8,8 @@ const app = express();
 app.use(express.json())
 
 app.use(cors());
-app.use('/user',userRoute)
-app.use('/products',productRoute)
+app.use('api//user',userRoute)
+app.use('api/products',productRoute)
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/APIwithJWT')
