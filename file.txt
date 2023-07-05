@@ -1,0 +1,8 @@
+aaun0019
+
+custompassword
+
+mongodb://127.0.0.1:27017/APIwithJWT
+
+
+mongodb+srv://aaun0019:custompassword@cluster0.nm6xraa.mongodb.net/
