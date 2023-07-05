@@ -15,7 +15,7 @@ app.use('/user',userRoute)
 app.use('/products',productRoute)
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/APIwithJWT')
+mongoose.connect('mongodb+srv://aaun0019:custompassword@cluster0.nm6xraa.mongodb.net/APIwithJWT')
 .then(()=>{
     console.log('Database Connected!')
     app.listen(5000,()=>{
