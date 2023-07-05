@@ -3,7 +3,9 @@ const productRoute = express.Router()
 const {getProduct,postProduct,deleteProduct,updateProduct,getProdById} = require('../controllers/productController.js')
 
 
-productRoute.get('/',getProduct)
+productRoute.get('/',(req,res)=>{
+    res.send('hello')
+})
 productRoute.post('/',postProduct)
 productRoute.delete('/:id',deleteProduct)
 productRoute.put('/:id',updateProduct)
