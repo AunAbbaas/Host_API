@@ -4,10 +4,12 @@ const productRoute = require('./routes/productRoute.js')
 const mongoose = require('mongoose')
 const cors = require('cors')
 
+
 const app = express();
+app.use(cors());
 app.use(express.json())
 
-app.use(cors());
+
 app.get('/',(req,res)=>{
     res.send('Hello')
 })
