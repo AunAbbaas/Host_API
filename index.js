@@ -13,10 +13,14 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
-app.use('/user',userRoute)
-app.use('/products',productRoute)
-app.use('/monitoring',monitorRoute)
-app.use('/admin',adminRoute)
+app.use('/api/user',userRoute)
+app.use('/api/products',productRoute)
+app.use('/api/monitoring',monitorRoute)
+app.use('/api/admin',adminRoute)
+
+app.get('/api,(req,res)=>{
+   res.send("Welcome");     
+});
 
 
 mongoose.connect(URL)
