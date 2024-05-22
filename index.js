@@ -7,6 +7,8 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 
 
+let URL = 'mongodb+srv://Aun:hey123@cluster0.eyfouzc.mongodb.net/APIwithJWT'
+
 const app = express();
 app.use(cors());
 app.use(express.json())
@@ -17,7 +19,7 @@ app.use('/monitoring',monitorRoute)
 app.use('/admin',adminRoute)
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/APIwithJWT')
+mongoose.connect(URL)
 .then(()=>{
     console.log('Database Connected!')
     app.listen(5000,()=>{
